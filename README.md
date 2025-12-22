@@ -8,4 +8,4 @@ Skills:HTML,CSS,JavaScript
 Projects:
 - Quiz App
 - Stone Paper Scissors
-- Weather App
+- Weather App(work in progress)
