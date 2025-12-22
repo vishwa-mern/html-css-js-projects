@@ -1,8 +1,8 @@
 # html-css-js-projects
 ## Hi 👋 I'm Vishwajeet
 
-Web Developer | HTML • CSS • JavaScript  
-Learning React & MERN
+Full stack Developer (MERN) | Learning and Building projects
+Skills:HTML,CSS,JavaScript
 
 Projects:
 - Quiz App
