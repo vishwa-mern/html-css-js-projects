@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #6fb6c9;
+        position: relative;
+        top:100px
+        }
+        .container{
+            font-family:' Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            position: relative;
+            bottom: 20px;
+        }
+        .container,.choice{
+            text-align: center;
+            
+        }
+        .choice{
+            display :flex;
+            justify-content: center;
+            gap: 30px;
+           position: relative;
+    
+        }
+        .choice1{
+            background-color: #46a4cc;
+            padding: 20px;
+            border-radius: 900px;
+            box-shadow: 0 4px 8px rgba(60, 115, 166, 0.884);
+            cursor: pointer;
+            transition: transform 0.2s;
+            font-size: xx-large;
+        }
+        .choice1:hover{
+            transform: scale(1.1);
+            transition: 05ms;
+        }
+        .result{
+            text-align: center;
+            margin-top: 50px;
+            font-size: x-large;
+            border: #223a42 solid 1px;
+            width: 350px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #46a4cc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(60, 115, 166, 0.884);
+        }
+        .result1 {
+            margin: 10px 0;
+            font-weight: bold;
+            position: relative;
+            right: 40px;
+        }
+    </style>
+</head> 
+<body>
+    
+    <div class="container">
+        <h1>*stone - paper  - seasor* </h1>
+        </div>
+        <div class="choice">
+            <div class="choice1" id="stone" data-choice="stone">🪨  </div>
+            <div class="choice1" id="paper" data-choice="paper">📰</div>
+            <div class="choice1" id="scissor" data-choice="scissor">✂️</div>
+        </div>
+        <div class="result">
+        <div class="result1">
+            <p id="userChoice">user :</p>
+            <p id="computerChoice">computer :</p>
+            <p id="result">result :</p>
+        </div>
+    <script>
+     const choice=document.querySelectorAll('.choice1');
+     const userChoice=document.querySelector('#userChoice');
+    const computerChoice=document.querySelector('#computerChoice');
+    const result=document.querySelector('#result');
+
+    choice.forEach(choice=>choice.addEventListener('click',function(){
+        const userSelection= this.dataset.choice;
+        userChoice.textContent=`user : ${userSelection}`;
+
+        const computerOptions=['stone','paper','scissor'];
+        const computerSelection=computerOptions[Math.floor(Math.random()*3)];
+    setTimeout(() => {
+        computerChoice.textContent=`computer : ${computerSelection}`;
+    },1000);
+
+    setTimeout(() => {
+    
+        if(userSelection===computerSelection)
+           return result.textContent='result : It is a tie!';
+        else if(
+            (userSelection==='stone' && computerSelection==='scissor')||
+            (userSelection==='paper' && computerSelection==='stone')||
+            (userSelection==='scissor' && computerSelection==='paper')
+        ){
+            result.textContent='result : You win!';
+        }else{
+            result.textContent='result : Computer wins!';
+
+        }
+    },1500);
+    }));
+
+
+
+    </script>
+</body>
+</html>
