@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid whitesmoke;
+      box-shadow: 0 0 2px 2px rgb(228, 227, 227);
+      width: 500px;
+      height: 650px;
+      position: relative;
+      left: 30%;
+      top: 50px;
+      background-color: #f0f8ff;
+      border-radius: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      position: relative;
+      top: 500px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      transition: 0.3s;
+    }
+
+    .quiz-box {
+      margin-top: 50px;
+      font-size: 20px;
+      text-align: center;
+      position: relative;
+      bottom: 100px;
+    }
+
+    .choices div {
+      
+      padding: 10px;
+      margin: 8px 0;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .choices :hover {
+      background: #487bc7;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Quiz App</h1>
+
+    <div class="quiz-container">
+      <button>Next Question</button>
+    </div>
+
+    <div class="quiz-box">
+      <h2 class="question">Question :</h2>
+
+      <div class="choices">
+        <div class="choice1">Choice 1:</div> <br>
+        
+        <div class="choice2">Choice 2:</div> <br>
+        
+        <div class="choice3">Choice 3:</div> <br>
+        
+        <div class="choice4">Choice 4:</div> <br>
+        
+      </div>
+    </div>
+  </div>
+
+  <script>
+   const quizQuestions = [
+  {
+    question: "What is a closure in JavaScript?",
+    choice1: "A function inside another function that can access outer variables",
+    choice2: "A block that closes the program",
+    choice3: "A method to stop execution",
+    choice4: "A special type of loop",
+    correctAnswer: "choice1"
+  },
+  {
+    question: "Which method is used to handle asynchronous code in modern JavaScript?",
+    choice1: "for loop",
+    choice2: "Callbacks only",
+    choice3: "Promises and async/await",
+    choice4: "setInterval only",
+    correctAnswer: "choice3"
+  },
+  {
+    question: "What does the 'this' keyword refer to in JavaScript?",
+    choice1: "The global variable always",
+    choice2: "The current file",
+    choice3: "The function itself",
+    choice4: "The object that calls the function",
+    correctAnswer: "choice4"
+  },
+  {
+    question: "What is the purpose of the Virtual DOM?",
+    choice1: "To store data permanently",
+    choice2: "To directly update the browser DOM",
+    choice3: "To improve performance by minimizing real DOM updates",
+    choice4: "To replace JavaScript",
+    correctAnswer: "choice3"
+  },
+  {
+    question: "Which HTTP method is used to partially update a resource?",
+    choice1: "GET",
+    choice2: "POST",
+    choice3: "PUT",
+    choice4: "PATCH",
+    correctAnswer: "choice4"
+  },
+  {
+    question: "What is event bubbling in JavaScript?",
+    choice1: "Event moves from parent to child",
+    choice2: "Event moves from child to parent",
+    choice3: "Event stops immediately",
+    choice4: "Event runs only once",
+    correctAnswer: "choice2"
+  },
+  {
+    question: "Which JavaScript feature allows spreading elements of an array or object?",
+    choice1: "Arrow function",
+    choice2: "Destructuring only",
+    choice3: "Rest operator",
+    choice4: "Spread operator",
+    correctAnswer: "choice4"
+  },
+  {
+    question: "What is the main difference between == and === in JavaScript?",
+    choice1: "No difference",
+    choice2: "== checks type only",
+    choice3: "=== checks value only",
+    choice4: "=== checks both value and type",
+    correctAnswer: "choice4"
+  },
+  {
+    question: "Which HTTP status code represents a successful request?",
+    choice1: "404",
+    choice2: "500",
+    choice3: "200",
+    choice4: "301",
+    correctAnswer: "choice3"
+  },
+  {
+    question: "What is middleware in Express.js?",
+    choice1: "A frontend framework",
+    choice2: "A database",
+    choice3: "A server only",
+    choice4: "A function that runs between request and response",
+    correctAnswer: "choice4"
+  }
+];
+
+   let selectedAnswer=null;
+   let score=0;
+    let currentQuestionIndex = 0;
+
+    const questionElement = document.querySelector('.question');
+    const choicesElements1 = document.querySelector('.choice1');
+    const choicesElements2 = document.querySelector('.choice2');
+    const choicesElements3 = document.querySelector('.choice3');
+    const choicesElements4 = document.querySelector('.choice4');
+
+    const nextButton = document.querySelector('button');
+    const allChoices = document.querySelectorAll(".choices div");
+
+    
+
+
+    function showQuestion() {
+      let currentQuestion = quizQuestions[currentQuestionIndex];
+
+      questionElement.textContent =
+        `Question ${currentQuestionIndex + 1}: ${currentQuestion.question}`;
+
+      choicesElements1.textContent = `Choice 1: ${currentQuestion.choice1}`;
+      choicesElements2.textContent = `Choice 2: ${currentQuestion.choice2}`;
+      choicesElements3.textContent = `Choice 3: ${currentQuestion.choice3}`;
+      choicesElements4.textContent = `Choice 4: ${currentQuestion.choice4}`;
+    }
+
+    // first question show
+    showQuestion();
+
+    
+
+    nextButton.addEventListener('click', function () {
+      currentQuestionIndex++;
+      
+      
+
+      if (currentQuestionIndex < quizQuestions.length) {
+        showQuestion();
+      } 
+
+   else{
+  
+  allChoices.forEach(c => c.style.display = "none");
+  nextButton.disabled = true;
+  questionElement.textContent = `Quiz Over! Your final score is: ${score}/${quizQuestions.length}`;
+  questionElement.style.fontSize = "70px";
+ questionElement.style.color = "#073579";
+}
+
+ allChoices.forEach(choice => {
+    choice.style.background = "white";
+  });
+
+  });
+    
+
+allChoices.forEach(choice => {
+  choice.addEventListener("click", () => {
+    selectedAnswer = choice.className;
+     currentQuestion = quizQuestions[currentQuestionIndex];
+     if (selectedAnswer===currentQuestion.correctAnwer)
+      {
+       score++;   
+      }
+      else{
+        score=score-1;
+      }
+    // highlight selected option
+    allChoices.forEach(c => c.style.background = "white");
+    choice.style.background = "#073579";
+  });
+  });
+
+
+
+
+ 
+
+  </script>
+
+</body>
+</html>
