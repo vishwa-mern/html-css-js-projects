@@ -236,7 +236,7 @@ allChoices.forEach(choice => {
   choice.addEventListener("click", () => {
     selectedAnswer = choice.className;
      currentQuestion = quizQuestions[currentQuestionIndex];
-     if (selectedAnswer===currentQuestion.correctAnwer)
+     if (selectedAnswer === currentQuestion.correctAnswer)
       {
        score++;   
       }
