@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Watch</title>
 
+  <style>
+    body{
+      margin:0;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+      background:#111;
+      font-family:Arial;
+    }
+    .watch{
+      font-size:60px;
+      font-weight:bold;
+      color:#fff;
+    }
+    .controls{
+      position:absolute;
+      bottom:30px;
+      display:flex;
+      gap:10px;
+    }
+    button{
+      padding:10px 15px;
+      border:none;
+      border-radius:6px;
+      cursor:pointer;
+      font-size:16px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="watch" id="time">00:00:00</div>
+
+  <div class="controls">
+    <button onclick="changeColor('red')">Red</button>
+    <button onclick="changeColor('lime')">Green</button>
+    <button onclick="changeColor('cyan')">Blue</button>
+    <button onclick="changeColor('yellow')">Yellow</button>
+  </div>
+
+  <script>
+    function updateTime(){
+      const now = new Date();
+      const h = String(now.getHours()).padStart(2,'0');
+      const m = String(now.getMinutes()).padStart(2,'0');
+      const s = String(now.getSeconds()).padStart(2,'0');
+      document.getElementById('time').textContent = `${h}:${m}:${s}`;
+    }
+    setInterval(updateTime,1000);
+    updateTime();
+
+    function changeColor(color){
+      document.getElementById('time').style.color = color;
+    }
+  </script>
+
+</body>
+</html>
