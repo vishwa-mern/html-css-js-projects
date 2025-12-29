@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+    <title>webpage</title>
+    <style>
+        .container{
+            border: 2px solid white;
+            border-radius: 10px;
+            background-color: blanchedalmond;
+            height: 500px; 
+        }
+        h1{
+            text-align: center;
+            
+        }
+        button{
+            font-size: large;
+            width: 160px;
+            border-radius: 5px;
+            background-color:blue;
+            color: rgb(220, 220, 220);
+            letter-spacing: 2px;
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+            
+        }
+       
+        
+        body{
+            display: flex;
+            background-color:aquamarine;
+            align-items: center;
+            text-align: center;
+            min-height 100vh;
+            justify-content: center;
+            align-items: center;
+           
+            z-index: 1;
+        }
+        .fieldset1{
+            text-align: center;
+            border: 2px dashed blue;
+            margin: 150px;
+            position: relative;
+            bottom: 120px;
+            border-radius:30px;
+            outline:hidden;    
+            overflow: hidden;
+            background-color:burlywood;
+            height: 190px;
+        }
+        .fieldset2{
+            text-align: center;
+            border: 2px dashed blue;
+            margin: 150px;
+            position: relative;
+            bottom: 250px;
+            border-radius:30px;
+            outline:hidden;    
+            overflow: hidden;
+            background-color:burlywood;
+            height: 170px;
+        }
+        .input1{
+            border-radius: 5px;
+            color:black;
+        }
+        .fieldset3{
+           border-radius :50px;
+           height: 500px;
+        background-color: rgba(128, 255, 0, 0.342);
+        
+        }
+        button:hover {
+  background-color: darkblue;
+  transform: scale(1.05);
+  transition: 0.3s ease;
+}
+input:focus {
+  outline: none;
+  border: 2px solid royalblue;
+  background-color: #fff8dc;
+}
+@media screen and (max-width: 600px) {
+  .container {
+    width: 90%;
+    margin: auto;
+    height: auto;
+  }
+  .fieldset1, .fieldset2 {
+    margin: 0px;
+    bottom: 0;
+  }
+}
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <fieldset style="border: 2px dashed blue;" class="fieldset3">
+       <Legend style="font-size: xx-large;"> Sign Up</legend>
+       
+        <form action="">
+            
+            <fieldset class="fieldset1">
+                <legend style="text-align: left;">personal info</legend>
+                name:<br><input type="text" class="input1" > <br> 
+                mobile No:<br> <input type="number" class="input1"><br> 
+                email id:<br><input type="email" class="input1">
+                 <br><br> <button>Click</button>
+            </fieldset>
+        </form>
+        <br
+        <form action="">            
+            <fieldset class="fieldset2">
+               <legend style="text-align:left;">Login Info</legend>
+                <label for="">Username:</label><br> <input type="text" class="input1"><br> <br>
+                Password:<br><input type="password" class="input1">
+                <br>
+                <br>
+                <button>Click</button>
+            </fieldset>
+            </form>
+            <br>
+            <button>click</button>
+              </fieldset>
+
+            <!-- Button and extra info below fieldset -->
+            
+
+    </div>
+</body>
+</html>
