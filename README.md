@@ -10,4 +10,5 @@ Projects:
 - Stone Paper Scissors(completed)
 - Weather App(work in progress)
 - login webpage (completed)
+-simple watch (completed)
 
