@@ -12,7 +12,3 @@ Projects:
 - login webpage (completed)
 - simple watch (completed)
 
-# Advanced JavaScript Practice
-
-This folder contains my JavaScript practice and small projects.
-Topics: DOM, functions, arrays, events.
