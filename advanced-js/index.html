@@ -1,1 +1,72 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .form1{
+         border: 2px dashed rgb(31, 156, 42);
+         width:400px;
+         margin: 50px; 
+         padding: 20px;
+         display:flex;
+         flex-direction: column;
+         gap:10px;
+        border-radius: 10px;
+        }
+        .div1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            gap: 20px;
+            
+        }
+        #name, #categary, #image, #price{
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid rgba(31, 156, 41, 0.443);
+            border-radius: 5px;
+        }
+        input::placeholder{
+            color: rgba(141, 44, 44, 0.71);
+            font-size: 14px;
+            font-weight:bolder; 
+            opacity: 0.7;
+            letter-spacing: 10px;
+            padding-left: 10px;
+        }
+        #button1{
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            position: relative;
+            bottom: 50px;
+            margin-bottom: 200px;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="xyz.html"> click</a>
+    <div class="div1">
+    <form class="form1" action="">
+        <input type="text" id="name" placeholder="name"  name="name">
+        <input type="number" id="categary" name="categary"  placeholder="categary" >
+        <input type="text" id="image" name="image" placeholder="image">
+        <input type="number" id="price" name="price" placeholder="price">
+        
+    </form>
+    <button type="submit" id="button1">Submit</button>
+    </div>
+</body>
+</html>
