@@ -59,7 +59,7 @@
 <body>
     <a href="xyz.html"> click</a>
     <div class="div1">
-    <form class="form1" action="">
+    <form class="form1" action="" onsubmit="products(event)">
         <input type="text" id="name" placeholder="name"  name="name">
         <input type="number" id="categary" name="categary"  placeholder="categary" >
         <input type="text" id="image" name="image" placeholder="image">
@@ -68,5 +68,15 @@
     </form>
     <button type="submit" id="button1">Submit</button>
     </div>
+    <script>
+         let button=document.querySelector("#button1");
+         button.addEventListener("click",products);
+            function products(event){
+                event.preventDefault();
+                
+            }
+
+
+    </script>
 </body>
 </html>
