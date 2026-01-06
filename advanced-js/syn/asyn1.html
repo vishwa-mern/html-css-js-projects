@@ -7,6 +7,7 @@
 </head>
 <body>
     <button class="button1" > click</button>
+    <button class="start">Start</button>
 </body>
 <script>
 //     function show(){
@@ -26,21 +27,55 @@
 // }, 5000);
 //  
 
+let isRunning=true;
+let pausetime=0;
+let id=null;
 let start = Date.now();
 let h3 = document.createElement("h3");
 document.body.appendChild(h3);
 let button = document.querySelector(".button1");
+let startButton = document.querySelector(".start");
 // tofixed means : to limit the decimal points ex: 2.34567 to 2.35 syntax: num.toFixed(digits) 
- let id = setInterval(() => {
+function startTimer(){
+  id = setInterval(() => {
   let seconds = (Date.now() - start)/1000;
-  h3.innerText = `${Math.floor(seconds*1000)} seconds have passed`;
+  h3.innerText = `${Math.floor(seconds)} seconds have passed`;
   h3.innerHTML += `<br> ${start} seconds have passed`;
   h3.innerHTML += `<br> ${Date.now()} seconds have passed`;
   h3.innerHTML += `<br> ${new Date().toLocaleTimeString()} current time`;
-}, 50);
+}, 1000);
+}
+startTimer();
+
 button.addEventListener("click", function(){
+    if (isRunning){
+        clearInterval(id);
+        pausetime=Date.now()-start;
+        isRunning = false;
+    }
     //alert(`You have been on this page for ${(Date.now() - start)/1000} seconds`);
-    clearInterval(id);
+});
+startButton.addEventListener("click", function(){
+    start = Date.now();
+    id = setInterval(() => {
+        
+        let seconds = (Date.now() - start)/1000;
+        h3.innerText = `${Math.floor(seconds)} seconds have passed`;
+        h3.innerHTML += `<br> ${start} seconds have passed`;
+        h3.innerHTML += `<br> ${Date.now()} seconds have passed`;
+        h3.innerHTML += `<br> ${new Date().toLocaleTimeString()} current time`;
+        }, 1000);
+    
+      });
+
+button.addEventListener("dblclick", function(){
+    if (!isRunning){
+        start = Date.now()- pausetime;
+        startTimer();
+        isRunning = true;
+    }
+
+
 });
 </script>
 
