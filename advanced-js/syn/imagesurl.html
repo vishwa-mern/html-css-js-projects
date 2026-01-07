@@ -10,18 +10,36 @@
     <input type="url" id="imageURL" placeholder="Enter image URL" name="url" />
     <button id="button1" >Add Image</button>
     <button id="button2"><a href="images.html"> click images</a></button>
+    <button id="button3">Clear_all_urls</button>
     <script>
+        
         let addImages=document.getElementById("button1");
         let imageURL=document.getElementById("imageURL");
+        let clearAll=document.getElementById("button3");
         addImages.addEventListener("click",function(){
-            imageURL.value=""
+            if(!imageURL.value){
+                alert("Please enter a valid URL");
+                return;
+            }
+          let url =  imageURL.value.trim();
+           if(url===""){
+            alert("Please enter a valid URL");
+           }
             let image=JSON.parse(localStorage.getItem("images")) || [];
-            image.push(imageURL.value);
+            image.push(url);
             localStorage.setItem("images",JSON.stringify(image));
+            imageURL.value="";
             console.log(image);
-        
-        })
+            
+        });
+     clearAll.addEventListener("click", function () {
+  if (confirm("Are you sure you want to delete all image URLs?")) {
+    localStorage.removeItem("images");
+    alert("All URLs deleted");
     
+  }
+});
+
     </script>
 </body>
 </html>

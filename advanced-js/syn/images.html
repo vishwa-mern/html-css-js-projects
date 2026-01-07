@@ -13,7 +13,7 @@
     <div id="images_div"></div>
     <script>
         let id;
-        let i;
+        let i = 0;
         let imagesDiv=document.getElementById("images_div");
         function displayImages(){
             let images_arr=JSON.parse(localStorage.getItem("images"));
@@ -25,7 +25,10 @@
                 img.src=images_arr[i];
                 imagesDiv.append(img);
                 i++;
+                 console.log(imagesDiv);
             },1000);
+           
+
         }
             function stopImages(){
                 clearInterval(id);
