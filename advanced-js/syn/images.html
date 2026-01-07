@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Images</h1>
+    <button><a href="imagesurl.html">click images_url</a></button>
+    <button onclick="displayImages()">Display Images</button>
+    <button onclick="stopImages()">Stop Images</button>
+    <div id="images_div"></div>
+    <script>
+        let id;
+        let i;
+        let imagesDiv=document.getElementById("images_div");
+        function displayImages(){
+            let images_arr=JSON.parse(localStorage.getItem("images"));
+            let img=document.createElement("img");
+           id = setInterval(function(){
+                if (i===images_arr.length){
+                    i=0;
+                }
+                img.src=images_arr[i];
+                imagesDiv.append(img);
+                i++;
+            },1000);
+        }
+            function stopImages(){
+                clearInterval(id);
+            }
+        
+        
+    </script>
+</body>
+</html>

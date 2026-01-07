@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>IMAGES URL</h1>
+    <input type="url" id="imageURL" placeholder="Enter image URL" name="url" />
+    <button id="button1" >Add Image</button>
+    <button id="button2"><a href="images.html"> click images</a></button>
+    <script>
+        let addImages=document.getElementById("button1");
+        let imageURL=document.getElementById("imageURL");
+        addImages.addEventListener("click",function(){
+            imageURL.value=""
+            let image=JSON.parse(localStorage.getItem("images")) || [];
+            image.push(imageURL.value);
+            localStorage.setItem("images",JSON.stringify(image));
+            console.log(image);
+        
+        })
+    
+    </script>
+</body>
+</html>

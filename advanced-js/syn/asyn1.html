@@ -43,7 +43,7 @@ function startTimer(){
   h3.innerHTML += `<br> ${start} seconds have passed`;
   h3.innerHTML += `<br> ${Date.now()} seconds have passed`;
   h3.innerHTML += `<br> ${new Date().toLocaleTimeString()} current time`;
-}, 1000);
+}, 50);
 }
 startTimer();
 
@@ -64,7 +64,7 @@ startButton.addEventListener("click", function(){
         h3.innerHTML += `<br> ${start} seconds have passed`;
         h3.innerHTML += `<br> ${Date.now()} seconds have passed`;
         h3.innerHTML += `<br> ${new Date().toLocaleTimeString()} current time`;
-        }, 1000);
+        }, 50);
     
       });
 
