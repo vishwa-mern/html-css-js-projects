@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Promise Demo</h1>
+<h2 id="h2"></h2>
+<button id="button">Click me</button>
+
+<script>
+let h2 = document.getElementById("h2");
+let button = document.getElementById("button");
+let success = true; // 🔁 toggle hoga
+
+function handleClick() {
+  return new Promise((resolve, reject) => {
+    if (success) {
+      resolve("✅ Promise resolved");
+    } else {
+      reject("❌ Promise rejected");
+    }
+    success=!success; // next click ke liye change
+  });
+};
+
+button.addEventListener("click", () => {
+  handleClick()
+    .then(message => {
+      h2.textContent = message;
+    })
+    .catch(message => {
+      h2.textContent = message;
+    });
+});
+</script>
+
+</body>
+</html>
+
+
