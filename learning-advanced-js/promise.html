@@ -4,7 +4,7 @@
 
 <h1>Promise Demo</h1>
 <h2 id="h2"></h2>
-<button id="button">Click me</button>
+<button id="button">Click me</button> 
 
 <script>
 let h2 = document.getElementById("h2");
@@ -22,15 +22,40 @@ function handleClick() {
   });
 };
 
-button.addEventListener("click", () => {
-  handleClick()
-    .then(message => {
-      h2.textContent = message;
-    })
-    .catch(message => {
-      h2.textContent = message;
-    });
+// button.addEventListener("click", () => {
+//  handleClick()
+//     .then(message => {
+//       h2.textContent = message;
+//     })
+//     .catch(message => {
+//       h2.textContent = message;
+//     });
+// }); 
+ let id=setInterval(function(){
+    handleClick()
+        .then(message => {
+        h2.textContent = message;
+        })
+        .catch(message => {
+        h2.textContent = message;
+        });
+}, 2000);
+
+button.addEventListener("click", function(){
+    clearInterval(id);
 });
+button.addEventListener("dblclick", function(){
+    id=setInterval(function(){
+        handleClick()
+            .then(message => {
+            h2.textContent = message;
+            })
+            .catch(message => {
+            h2.textContent = message;
+            });
+    }, 2000);
+});
+ 
 </script>
 
 </body>
