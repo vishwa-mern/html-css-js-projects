@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+    <style>
+        #product{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        margin-bottom:20px;
+        align-items:center;
+        gap:10px;
+        
+        }
+        #price{
+            color:green;
+            font-weight:bold;
+        
+        }
+        #image{
+            box-shadow:2px 2px 72px rgb(11, 20, 116);
+            margin-bottom:10px;
+            border-radius:5px;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <h3>fetch api examples</h3>
+    <button id="button">Click me</button>
+    <div id="output"></div>
+    <script>
+    let button=document.getElementById('button');
+    let output=document.getElementById('output');
+       fetch('https://fakestoreapi.com/products')
+       .then(res=>res.json())
+       .then(data=>{
+        data.forEach(product=>{
+            let div=document.createElement('div');
+            div.innerHTML=`<div id="product">
+            <h4>${product.title}</h4>
+            <img id="image" src=${product.image} alt=${product.title} width="100"/>
+            <p id="price">Price: $${product.price}</p>
+            </div>
+            <hr/>`;
+        output.appendChild(div);
+         });
+         })
+         .catch(err=>console.log('Error:',err));
+
+    </script>
+</body>
+</html>
