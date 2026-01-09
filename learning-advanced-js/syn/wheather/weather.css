@@ -1,0 +1,28 @@
+#wheather_container {
+    display:flex;
+    justify-content:center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    color:#363535;  
+}
+#wheather_container:hover{
+    color:blue;
+    text-shadow: 0 0 5px rgba(0,0,255,0.5);
+    text-align:center;
+
+}
+#city{
+    display:block;
+    margin:20px auto;
+    font-size:16px;
+}
+#city:hover{
+    border:2px solid blue;
+    box-shadow: 0 0 10px rgba(0,0,255,0.5);
+    border-radius: 5px;
+}
+#city:focus{
+    outline:none;
+    border:2px solid green;
+    box-shadow: 0 0 10px rgba(0,255,0,0.5);
+    border-radius: 5px;
+}
