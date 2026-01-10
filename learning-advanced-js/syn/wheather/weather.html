@@ -10,5 +10,29 @@
     <h1 id="wheather_container">*WHEATHER-APP*</h1>
     <input type="text" id="city" placeholder="Enter City Name"/>
     <button id="search">Search</button>
+    <script>
+
+//https://api.openweathermap.org/data/2.5/weather?q=London&appid=1a8ebaf19b0721daadbce0ecd72740ef
+let button = document.querySelector("#search");
+button.addEventListener("click",function(){
+    let city=document.getElementById("city").value;
+    let url =`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=1a8ebaf19b0721daadbce0ecd72740ef`;
+    fetch(url)
+    .then(res=>res.json())
+    .then(function(data){
+        console.log(data);
+        let div=document.createElement("div");
+        div.innerHTML=`
+        <h2>city:${data.name}</h2>
+        <h4> temperature:${Math.floor(data.main.temp-273.15)}&deg;C</h4>
+        <h4>humidity:${data.main.humidity}%</h4>
+        <h4>wind speed:${data.wind.speed}m/s</h4>
+        `;
+        document.body.append(div);
+        city.value="";
+        
+})
+});
+    </script>
 </body>
 </html>
