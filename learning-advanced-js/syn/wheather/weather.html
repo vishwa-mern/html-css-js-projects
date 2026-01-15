@@ -1,38 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="weather.css">
 </head>
+
 <body>
     <h1 id="wheather_container">*WHEATHER-APP*</h1>
-    <input type="text" id="city" placeholder="Enter City Name"/>
-    <button id="search">Search</button>
+    <input type="text" id="city" placeholder="Enter City Name" />
+    <button id="get_wheather">Get Wheather</button>
+    <div id="wheather_data"></div>
+    <div class="mapouter">
+        <div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0"
+                marginwidth="0">
+              </iframe><a href="https://wheremylocation.com/">where am i</a></div>
+      
+    </div>
+
+
     <script>
 
-//https://api.openweathermap.org/data/2.5/weather?q=London&appid=1a8ebaf19b0721daadbce0ecd72740ef
-let button = document.querySelector("#search");
-button.addEventListener("click",function(){
-    let city=document.getElementById("city").value;
-    let url =`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=1a8ebaf19b0721daadbce0ecd72740ef`;
-    fetch(url)
-    .then(res=>res.json())
-    .then(function(data){
-        console.log(data);
-        let div=document.createElement("div");
-        div.innerHTML=`
+
+        //https://api.openweathermap.org/data/2.5/weather?q=London&appid=1a8ebaf19b0721daadbce0ecd72740ef
+
+        let button = document.getElementById("get_wheather");
+
+        button.addEventListener("click", function () {
+            let city = document.getElementById("city");
+            let mapFrame = document.querySelector(".gmap_iframe");
+            let input = city.value;
+            let url = `https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=1a8ebaf19b0721daadbce0ecd72740ef`;
+            fetch(url)
+                .then(res => res.json())
+                .then(function (data) {
+                    console.log(data);
+                    let div = document.getElementById("wheather_data");
+                    div.innerHTML = `
         <h2>city:${data.name}</h2>
-        <h4> temperature:${Math.floor(data.main.temp-273.15)}&deg;C</h4>
+        <h4> temperature:${Math.floor(data.main.temp - 273.15)}&deg;C</h4>
         <h4>humidity:${data.main.humidity}%</h4>
         <h4>wind speed:${data.wind.speed}m/s</h4>
         `;
-        document.body.append(div);
-        city.value="";
-        
-})
-});
-    </script>
-</body>
-</html>
+                    document.body.append(div);
+                    city.value = "";
+                    mapFrame.src = `https://maps.google.com/maps?q=${data.name}&output=embed`;
+
+
+                })
+
+        });
+          
+  //src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=2880 Broadway, New York&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+     </script>  
+
+</body >
+
+</html >

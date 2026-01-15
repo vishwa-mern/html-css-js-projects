@@ -1,28 +1,87 @@
-#wheather_container {
-    display:flex;
-    justify-content:center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-    color:#363535;  
-}
-#wheather_container:hover{
-    color:blue;
-    text-shadow: 0 0 5px rgba(0,0,255,0.5);
-    text-align:center;
+ *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+ body {
+     background-color: #f0f8ff;
+      
+     background-image: url(https://imgs.search.brave.com/Wxndc_NRfJALTVqpiDQJ8z8Rox8bYmleJvDvmCvEJtk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMzAv/NjY4LzI4NS9zbWFs/bC9ncmF5LWJhY2tn/cm91bmQtaGlnaC1x/dWFsaXR5LWZyZWUt/cGhvdG8uanBn);
+       background-position: center;
+       background-size: cover;
+       background-repeat: no-repeat;
+       background-attachment: fixed;
+    }
 
-}
-#city{
-    display:block;
-    margin:20px auto;
-    font-size:16px;
-}
-#city:hover{
-    border:2px solid blue;
-    box-shadow: 0 0 10px rgba(0,0,255,0.5);
-    border-radius: 5px;
-}
-#city:focus{
-    outline:none;
-    border:2px solid green;
-    box-shadow: 0 0 10px rgba(0,255,0,0.5);
-    border-radius: 5px;
-}
+
+ #wheather_container {
+     display: flex;
+     justify-content: center;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     color: #363535;
+ }
+
+ #wheather_container:hover {
+     color: blue;
+     text-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+     text-align: center;
+
+ }
+
+ #city {
+     display: block;
+     margin: 20px auto;
+     font-size: 16px;
+ }
+
+ #city:hover {
+     border: 2px solid blue;
+     box-shadow: 0 0 10px rgba(0, 0, 255, 0.5);
+     border-radius: 5px;
+ }
+
+ #city:focus {
+     outline: none;
+     border: 2px solid green;
+     box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+     border-radius: 5px;
+ }
+
+ #wheather_data {
+     margin-top: 20px;
+     
+     border: 2px solid #363535;
+     padding: 20px;
+     border-radius: 10px;
+     width: 300px;
+     color: rgb(20, 9, 183);
+     background-color: rgba(255, 255, 255, 0.8);
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     position: relative;
+     left: 700px;
+     bottom: 400px;
+     line-height:50px;
+     
+     
+
+ }
+
+ .mapouter {
+     position: relative;
+     text-align: right;
+     width: 600px;
+     height: 400px;
+ }
+
+ .gmap_canvas {
+     overflow: hidden;
+     background: none !important;
+     width: 600px;
+     height: 400px;
+ }
+
+ .gmap_iframe {
+     width: 600px !important;
+     height: 400px !important;
+ }
