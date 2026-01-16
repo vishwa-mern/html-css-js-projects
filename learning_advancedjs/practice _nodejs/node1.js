@@ -1,10 +1,11 @@
 const http=require('http');
 const server=http.createServer((req,res)=>
     {
-        if (req.url==='/'){
+        if (req.url==='/' && req.method==='GET'){
             res.end("home page");
+            
         }
-        else if (req.url==='/about'){
+        else if (req.url==='/about' && req.method==='POST'){
             res.end("about page");
             console.log("about page visited");
         }
