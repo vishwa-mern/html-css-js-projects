@@ -1,0 +1,23 @@
+{
+  "name": "html-css-js-projects",
+  "version": "1.0.0",
+  "description": "Full stack Developer (MERN) | Learning & Building projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vishwa-mern/html-css-js-projects.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vishwa-mern/html-css-js-projects/issues"
+  },
+  "homepage": "https://github.com/vishwa-mern/html-css-js-projects#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
