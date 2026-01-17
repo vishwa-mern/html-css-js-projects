@@ -10,6 +10,10 @@ app.get("/style",(req,res)=>{
     res.write("h1{color:red;}");
 
 })
+app.post("/about",(req,res)=>{
+    res.end("about page");
+    console.log("about page visited");
+});
 app.listen(4000,() => {
     console.log("Server is running on port 4000");
-})
+});
