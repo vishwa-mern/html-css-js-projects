@@ -21,9 +21,18 @@ console.log(typeof item1,
     item2,
     item3);
 
-    let item={
-        "name":"vishwajeet",
-        "age":20
-    }
- let {name,age}=item  
- console.log(typeof name);
+//     let item={
+//         "name":"vishwajeet",
+//         "age":20
+//     }
+//  let {name,age}=item  
+ 
+
+
+ const name = "Pen";
+ const price = 10;
+
+const newProduct = { name, price };
+console.log(newProduct);
+let time=new Date()
+console.log(time);
