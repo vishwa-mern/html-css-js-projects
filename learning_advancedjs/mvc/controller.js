@@ -20,8 +20,12 @@ getAttendence=(req,res)=>{
     res.json(totalAttendance)
     
 }
+ 
+home=(req,res)=>{
+    res.render('home',{attendance:totalAttendance})
+};
 
 
 
-module.exports={addAttendence,getAttendence};
+module.exports={addAttendence,getAttendence,home};
 
