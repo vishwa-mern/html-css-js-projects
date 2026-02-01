@@ -19,6 +19,7 @@
   "homepage": "https://github.com/vishwa-mern/html-css-js-projects#readme",
   "dependencies": {
     "ejs": "^4.0.1",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "mongoose": "^9.1.5"
   }
 }

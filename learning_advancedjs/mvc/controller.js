@@ -1,4 +1,4 @@
-const totalAttendance = require("./model");
+const totalAttendance = require("./model/model.js");
  addAttendence=(req,res)=>{
     const student = req.body.name;
     if (!student){
