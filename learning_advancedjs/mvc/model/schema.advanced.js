@@ -4,9 +4,11 @@ const schemaName = new mongoose.Schema({
     name:{
         type:String,
         required:true
-    }
+    },
     time:{
         type:String
     }
 });
-module.exports=mongoose.model("Attendence",schemaName);
+const Todo = mongoose.model("Attendance", schemaName);
+
+module.exports = Todo ;
