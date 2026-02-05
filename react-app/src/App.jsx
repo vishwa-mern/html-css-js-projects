@@ -3,7 +3,10 @@ import Course from "./Course"
 function App() {
  const name="Vishwajeet"
  const friends=["vedant ","vaibhav ","aarushi ","satyarth ","pratik "]
-
+ const fruits = (name) =>{
+  alert(name)
+ }
+ 
   return (
     <div>
       <h1>
@@ -26,6 +29,8 @@ function App() {
       </h3>
       {Learn()}
        <Learn/>
+        <button onClick={() => fruits("apple")}>Click me</button>
+        <button onClick={()=>Click("button clicked")}>Click me</button>
     </div>
   )
 }
@@ -50,3 +55,6 @@ export default App
 
 
 
+  function Click(click){
+    alert(click)
+  }
