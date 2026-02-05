@@ -1,4 +1,5 @@
 
+import Course from "./Course"
 function App() {
  const name="Vishwajeet"
   return (
@@ -16,8 +17,10 @@ function App() {
 function Learn(){
   return(
     <div>
+      <Course/>
       <h1>
          <ul>
+          
           <li>
               i am learning react js.
           </li>
