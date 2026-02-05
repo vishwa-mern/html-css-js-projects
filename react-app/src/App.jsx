@@ -2,6 +2,8 @@
 import Course from "./Course"
 function App() {
  const name="Vishwajeet"
+ const friends=["vedant ","vaibhav ","aarushi ","satyarth ","pratik "]
+
   return (
     <div>
       <h1>
@@ -9,6 +11,18 @@ function App() {
         <br />
        
       </h1>
+      <h3>
+        My friends are:{friends.join(",")}
+       <ol>
+        my friends are: 
+         {
+         friends.map((friend,index)=> {
+          return <li key = {index}>{friend}</li>
+         
+        })
+        } 
+</ol>
+      </h3>
        <Learn/>
     </div>
   )
