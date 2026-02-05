@@ -13,6 +13,7 @@ function App() {
       </h1>
       <h3>
         My friends are:{friends.join(",")}
+        {friends[1]}
        <ol>
         my friends are: 
          {
@@ -23,6 +24,7 @@ function App() {
         } 
 </ol>
       </h3>
+      {Learn()}
        <Learn/>
     </div>
   )
