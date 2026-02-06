@@ -36,3 +36,16 @@ const newProduct = { name, price };
 console.log(newProduct);
 let time=new Date()
 console.log(time);
+
+function outer(message){
+    console.log(message);
+    function inner(mes){
+        console.log(mes);
+        function innermost(){
+            console.log("innermost function");
+        }
+        innermost();
+    }
+     inner("inner function");
+}
+outer("outer function");
