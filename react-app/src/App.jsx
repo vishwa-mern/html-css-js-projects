@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Course from "./Course";
-import Time from "./time";
+import Course from "./Component/course";
+import Time from "./Component/time";
 function App() {
  const name="Vishwajeet";
  const friends=["vedant ","vaibhav ","aarushi ","satyarth ","pratik "];
