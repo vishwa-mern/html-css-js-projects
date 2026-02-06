@@ -35,3 +35,8 @@ function outerFunction(message){
 }
 const myFunction = outerFunction("Hello from closure!");
 myFunction(); // Outputs: Inner Function: Hello from closure!
+
+
+
+
+

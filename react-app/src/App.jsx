@@ -1,14 +1,14 @@
-import { useState } from "react"
-import Course from "./Course"
+import { useState } from "react";
+import Course from "./Course";
+import Time from "./time";
 function App() {
- const name="Vishwajeet"
- const friends=["vedant ","vaibhav ","aarushi ","satyarth ","pratik "]
+ const name="Vishwajeet";
+ const friends=["vedant ","vaibhav ","aarushi ","satyarth ","pratik "];
  let count=0;
  const fruits = (name) =>{
   alert(name)
  }
- 
- const [count1, setCount1] = useState(0);
+ const [count1, setCount1] =useState(0);
   return (
     <div>
       <h1>
@@ -23,8 +23,7 @@ function App() {
         my friends are: 
          {
          friends.map((friend,index)=> {
-          return <li key = {index}>{friend}</li>
-         
+          return <li key = {index}>{friend}</li> 
         })
         } 
 </ol>
@@ -33,9 +32,10 @@ function App() {
        <Learn/>
         <button onClick={() => fruits("apple")}>Click me</button>
         <button onClick={()=>Click()}>Click me</button>
-        <button onClick={()=>{count++; console.log("count:", count);}}>Click</button>
-        <button onClick={()=>setCount1(count1+1)}>Increment Count</button>
+        <button onClick={()=>{count++; console.log("count:", count);}}>Click</button>   
+        <button onClick={()=>setCount1(count1+1)}>Click me</button>
         <h1>Count value is: {count1}</h1>
+        <Time/>
        
     </div>
   )
@@ -56,11 +56,6 @@ function Learn(){
     </div>
   )
 }
-
-export default App
-
-
-
   function Click(){
   
    return (
@@ -71,3 +66,4 @@ export default App
     </div>
    )
 }
+export default App
