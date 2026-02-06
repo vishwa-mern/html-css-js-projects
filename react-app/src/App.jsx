@@ -36,7 +36,7 @@ function App() {
         <button onClick={()=>setCount1(count1+1)}>Click me</button>
         <h1>Count value is: {count1}</h1>
         <Time/>
-       
+       <Click/>
     </div>
   )
 }
@@ -47,7 +47,6 @@ function Learn(){
       <Course/>
       <h1>
          <ul>
-          
           <li>
               i am learning react js.
           </li>
@@ -63,7 +62,32 @@ function Learn(){
       <h1>
         hello world
       </h1>
+      <Count/>
     </div>
    )
+}
+function Count(){
+  const [count, setCount] = useState(0);
+  return (
+    <div>
+      <h1>{count}</h1>
+      <button onClick={
+        ()=>setCount(count+1)
+      } >clicki</button>
+      {
+      count === 0 ? <h1>condition 0</h1> 
+      :count ===1 ?<h1>condition 1</h1>
+      :count ===2 ? <h1>condition2</h1>
+      :count ===3 ?<h1>condition3</h1>
+      :count ===4 ?<h1>condition4</h1>
+      :count ===5 ?<h1>condition5</h1>
+      :count ===6 ?<h1>condition6</h1>
+      :count ===7 ?<h1>condition7</h1>
+      :count ===8 ?<h1>condition8</h1>
+      :count ===9 ?<h1>condition9</h1>
+      :<h1>condition10</h1>
+      } 
+    </div>
+    )
 }
 export default App
