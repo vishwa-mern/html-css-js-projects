@@ -2,17 +2,18 @@ import "./extra.css"
 function Extra(props){
    console.log(props.data);
     return(
-        
-        <div>
+        <>
             <h1>
-                {props.title} will be held in {props.year}
-                <ul>
+                {/* {props.title} will be held in {props.year} */}
+                {/* <ul>
                     <li>India</li>
                     <li>Australia</li>
                     <li>England</li>    
-                </ul>
+                </ul> */}
             </h1> 
-            <div className="file">
+            
+          < > 
+            <div className="file" >
                 <h1>
                     id:{props.data.id}
                 </h1>
@@ -30,9 +31,8 @@ function Extra(props){
                 </h5>
                    
             </div>
-            </div>
-          
-            
-    )
+            </>
+            </>
+        )
 }
 export default Extra

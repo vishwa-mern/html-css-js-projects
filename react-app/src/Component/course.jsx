@@ -14,14 +14,15 @@ function Course(){
             </h1>
             <img src={url} alt="" /> 
            
-
+        <div style={{display:"grid",gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))"
+, gap:"20px"}}>
             {
                 userData.map((user)=>{
-                    return <Extra tile = "odi world cup" year={2025} data ={user} />
+                    return <Extra title = "odi world cup" year={2025} data ={user} />
                 })
             }
         </div>
-         
+         </div>
     )
 }
 export default Course
