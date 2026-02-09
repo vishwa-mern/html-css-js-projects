@@ -1,0 +1,10 @@
+.file{
+    color: red;
+    height: 300px;
+    width: 500px;
+    background-color: rgba(110, 108, 108, 0.66);
+    border: 2px solid black;
+    border-radius: 20px ;
+    margin-left: 20px;
+    padding-left:20px ;
+}

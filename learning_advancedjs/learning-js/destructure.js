@@ -1,51 +1,19 @@
-// let car =["honda","toyata"];
-// let [first,second]=car
-let car={
-    item1:"mazada",
-    item2:"cx30",
-   item3:"red"
+let name =["John", "Smith", "Doe", "Jane", "dash", "vishwajeet", "like"];
+let [firstName,, lastName, ...rest] = name;
+console.log(firstName); // Output: John
+console.log(lastName);// Output: Doe
+//spread defination -> The spread operator is a syntax in JavaScript that allows an iterable (like an array or string) to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected. It is denoted by three dots (...). 
+console.log(rest); // Output: ["Doe", "Jane", "dash", "vishwajeet", "like"]
+
+const person = {
+    name:"john",
+    age:30,
+    city:"New York",
+    mobile_no:1234567890
 }
-// let {
-//     item1:name,
-//     item2:brand,
-//     item3:color
-
-// }=car
-
-let {
-    item1,
-    item2,
-    item3
-}=car
-console.log(typeof item1,
-    item2,
-    item3);
-
-//     let item={
-//         "name":"vishwajeet",
-//         "age":20
-//     }
-//  let {name,age}=item  
- 
+let {name:personName, age, ...restInfo} = person;
+console.log(personName); // Output: john
+console.log(age); // Output: 30
+console.log(restInfo); // Output: { city: "New York", mobile_no: 1234567890 }
 
 
- const name = "Pen";
- const price = 10;
-
-const newProduct = { name, price };
-console.log(newProduct);
-let time=new Date()
-console.log(time);
-
-function outer(message){
-    console.log(message);
-    function inner(mes){
-        console.log(mes);
-        function innermost(){
-            console.log("innermost function");
-        }
-        innermost();
-    }
-     inner("inner function");
-}
-outer("outer function");
