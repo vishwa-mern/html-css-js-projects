@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import ConditionalRendering from "./conditionalrendering";
+
 
 function Time() {
   const [time, setTime] = useState(0);
@@ -14,6 +16,7 @@ function Time() {
   return (
     <div>
       <h1>Time: {time}</h1>
+      <ConditionalRendering />
     </div>
   );
 }

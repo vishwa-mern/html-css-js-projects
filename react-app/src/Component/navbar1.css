@@ -1,0 +1,24 @@
+.nav-item h5{
+    text-decoration: none;
+    color: #333;
+    font-weight:bolder;
+    display: flex;
+    gap: 100px;
+    font-size: larger;
+    border: 2px solid black; 
+    width: 720px;
+    padding: 10px;
+    margin-left: 20px;
+    background-color: aquamarine;
+    border-radius: 20px;
+    padding-left: 25px;
+        
+}
+
+
+
+
+.container{
+    background-color: bisque;
+    height: 140px;
+}

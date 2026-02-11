@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Course from "./Component/course";
 import Time from "./Component/time";
+import Navbar1 from "./Component/navbar1";
 
 function App() {
  const name="Vishwajeet";
@@ -11,6 +12,8 @@ function App() {
  }
  const [count1, setCount1] =useState(0);
   return (
+    <>
+    
     <div>
       <h1>
         Hallo my name is {name}
@@ -39,7 +42,8 @@ function App() {
         <Time/>
        <Click/>
     </div>
-  )
+    </>
+  );
 }
 function Learn(){
   return(
@@ -70,6 +74,7 @@ function Learn(){
 function Count(){
   const [count, setCount] = useState(0);
   return (
+    <>
     <div>
       <h1>{count}</h1>
       <button onClick={
@@ -89,6 +94,10 @@ function Count(){
       :<h1>condition10</h1>
       } 
     </div>
+    <div>
+      <Navbar1 />
+    </div>
+    </>
     )
 }
 export default App
