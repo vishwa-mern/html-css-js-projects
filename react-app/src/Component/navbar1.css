@@ -15,10 +15,65 @@
         
 }
 
-
-
+.nav-item h5:hover{
+    background-color: lightblue;
+    color: white;
+    border: 2px solid black; 
+    width: 720px;
+    padding: 10px;
+    margin-left: 20px;
+    border-radius: 20px;
+    padding-left: 25px;
+    
+}
+.nav-link:hover{
+    color: rgb(21, 106, 143);   
+    transition: 0.2s; 
+    cursor: pointer;
+    
+}
 
 .container{
     background-color: bisque;
     height: 140px;
+}
+.nav-item{
+    display: flex;
+    align-items: center; 
+    position:relative;
+    bottom: 30px;  
+    margin-left: 150px;
+} 
+.btn{
+    background-color: lightblue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: larger;
+    font-weight: bolder;
+    margin-left: 20px;
+}  
+.btn:hover{
+    background-color: blue;
+    color: white;
+    transition: 1s;
+    
+
+}
+.btn:active{
+    background-color: darkblue;
+    color: white;
+    transform: translateX(2px) translateZ(2px);
+    transform: rotate(15deg); 
+    transform: scale(0.9);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+
+}
+.nav-link:active{
+    background-color: rgb(10, 188, 191);
+    transform: translateX(2px) translateZ(2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+       
 }
