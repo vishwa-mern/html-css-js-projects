@@ -101,11 +101,12 @@
 //     )
 // }
 import Effect from "./Component/useEffect";
-
+import DataFetching from "./Component/detaFetching";
 function App(){
   return(
     <>
-    <Effect/>
+    {/* <Effect/> */}
+    <DataFetching/>
     </>
   )
 }
