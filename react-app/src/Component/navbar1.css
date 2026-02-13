@@ -74,6 +74,5 @@
 .nav-link:active{
     background-color: rgb(10, 188, 191);
     transform: translateX(2px) translateZ(2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-       
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);      
 }
