@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useEffect } from "react";
+import   "./fetchdata.css"
 
 function DataFetching(){
     const [data, setdata] = useState({});
