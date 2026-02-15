@@ -103,12 +103,14 @@
 import Effect from "./Component/useEffect";
 import DataFetching from "./Component/detaFetching";
 import Dashboard from "./Component/Dashboard";
+import Login from "./Component/UserLogin";
 function App(){
   name="Vishwajeet";
   return(
     <>
-    { <Effect/> }
-    <DataFetching name={name}/>
+    {/* { <Effect/> }
+    <DataFetching name={name}/> */}
+    <Login/>
     
     </>
   )
