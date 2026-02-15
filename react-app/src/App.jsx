@@ -102,11 +102,14 @@
 // }
 import Effect from "./Component/useEffect";
 import DataFetching from "./Component/detaFetching";
+import Dashboard from "./Component/Dashboard";
 function App(){
+  name="Vishwajeet";
   return(
     <>
-    {/* <Effect/> */}
-    <DataFetching/>
+    { <Effect/> }
+    <DataFetching name={name}/>
+    
     </>
   )
 }

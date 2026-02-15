@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { useEffect } from "react";
+import Dashboard from "./Dashboard";
 import   "./fetchdata.css"
 
-function DataFetching(){
+function DataFetching( {name}){
     const [data, setdata] = useState({});
     let apiURL = "https://official-joke-api.appspot.com/random_joke";
   async  function fetchData(){
@@ -22,15 +23,22 @@ useEffect(()=>{
 
  return(
     <div>
+         
       <h1>
         Data Fetching 
       </h1>
       <div className="data-container">
-       <h2> Data:{data.id}</h2>
+       {/* <h2> Data:{data.id}</h2>
         <h2> Type:{data.type}</h2>
         <h2>Joke: {data.setup}</h2>
         <h3>Punchline: {data.punchline}</h3>
+         */}
+         <h1>  this is data fetching component</h1>
+        
+         <Dashboard name={name}/>
         </div>
+       
+        
     </div>
  )   
 }
