@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,4 +39,29 @@
 
 .read-the-docs {
   color: #888;
+} */
+
+button{
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(22, 7, 228, 0.756);
+  color: white;
+  font-size:16px;
+  cursor:pointer;
+  
+}
+button:hover{
+    background-color: rgba(22, 7, 228, 0.756);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    
+}
+button:active{
+    background-color: rgba(22, 7, 228, 0.756);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transform: scale(0.95);
 }

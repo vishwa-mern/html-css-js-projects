@@ -103,16 +103,25 @@
 import Effect from "./Component/useEffect";
 import DataFetching from "./Component/detaFetching";
 import Dashboard from "./Component/Dashboard";
+import { useState } from "react";
 import Login from "./Component/UserLogin";
+import Profile from "./Component/profile";
+import "./App.css"
 function App(){
   name="Vishwajeet";
+  const [isLogin, setIsLogin] = useState(false);
+  console.log(isLogin);
   return(
     <>
     {/* { <Effect/> }
     <DataFetching name={name}/> */}
-    <Login/>
     
-    </>
+    {isLogin ? <Profile/> :<Login/>}  
+
+    {isLogin?<button onClick={()=>setIsLogin(!isLogin)}>Login page</button>:<button onClick={()=>setIsLogin(!isLogin)}>Profile page</button>}
+
+    
+      </>
   )
 }
 export default App

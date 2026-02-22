@@ -69,3 +69,14 @@ input:hover{
     color:rgb(17, 7, 154) ;
     font-weight: bold;
 }
+button{
+    background-color: lightblue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: larger;
+    font-weight: bolder;
+    margin: 10px;
+}
