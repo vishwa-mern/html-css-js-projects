@@ -1,5 +1,7 @@
 import CustumHook from "./context/custumHook";
 import React from "react";
+import From from "./context/forms";
+
 
 const Counter = () => { 
     console.log(CustumHook());
@@ -18,7 +20,9 @@ const Counter = () => {
             <button onClick={increment}>Increment</button>
             <button onClick={decrement}>Decrement</button>
             <button onClick={reset}>Reset</button>  
+            <From/>
         </div>
+        
     )
 }
 export default Counter;

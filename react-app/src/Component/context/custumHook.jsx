@@ -13,6 +13,7 @@ const CustumHook=(c)=>{
     return (
     
         [X,increment,decrement,reset]
+        
     )
     
 }

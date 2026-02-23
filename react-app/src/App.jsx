@@ -100,28 +100,67 @@
 //     </>
 //     )
 // }
-import Effect from "./Component/useEffect";
-import DataFetching from "./Component/detaFetching";
-import Dashboard from "./Component/Dashboard";
-import { useState } from "react";
-import Login from "./Component/UserLogin";
-import Profile from "./Component/profile";
-import "./App.css"
+// import Effect from "./Component/useEffect";
+// import DataFetching from "./Component/detaFetching";
+// import Dashboard from "./Component/Dashboard";
+// import { useState } from "react";
+// import Login from "./Component/UserLogin";
+// import Profile from "./Component/profile";
+// import "./App.css"
+// function App(){
+//   name="Vishwajeet";
+//   const [isLogin, setIsLogin] = useState(false);
+//   console.log(isLogin);
+//   return(
+//     <>
+//     {/* { <Effect/> }
+//     <DataFetching name={name}/> */}
+    
+//     {isLogin ? <Profile/> :<Login/>}  
+
+//     {isLogin?<button onClick={()=>setIsLogin(!isLogin)}>Login page</button>:<button onClick={()=>setIsLogin(!isLogin)}>Profile page</button>}
+
+    
+//       </>
+//   )
+// }
+// export default App
+
+import Page from "./Component/page"
+import Profile from "./Component/context/Profile55"
+import Navbar1 from "./Component/navbar1"
+import { Route,Routes } from "react-router-dom"
+import Extra from "./Component/extra"
+import userData from "./Component/data"
+
 function App(){
-  name="Vishwajeet";
-  const [isLogin, setIsLogin] = useState(false);
-  console.log(isLogin);
-  return(
-    <>
-    {/* { <Effect/> }
-    <DataFetching name={name}/> */}
-    
-    {isLogin ? <Profile/> :<Login/>}  
+  console.log(userData[0]);
+  userData.map((item)=>{
+    console.log(item.email);
+  })
+  return (
+    <div>
+      <Navbar1/>
+      <h1> ceate react-application</h1>
+      <Page/>
+      <Profile/>
+      {/* {
+        userData.map((item)=>(
+          <Extra key={item.id} data={item} />
+        ))} */}
 
-    {isLogin?<button onClick={()=>setIsLogin(!isLogin)}>Login page</button>:<button onClick={()=>setIsLogin(!isLogin)}>Profile page</button>}
+      <Routes>
+        <Route path="/home" element={<h1>THIS IS HOME PAGE</h1>}/>
 
-    
-      </>
+        { <Route path="/Extra" element={<div>
+           {
+        userData.map((item)=>(
+          <Extra key={item.id} data={item} />
+        ))}
+
+        </div>}/> }
+      </Routes>
+    </div>
   )
 }
 export default App
