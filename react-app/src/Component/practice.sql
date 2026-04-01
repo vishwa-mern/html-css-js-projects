@@ -1,12 +1,6 @@
  SHOW DATABASES;
-CREATE DATABASE college;
-USE college;
+USE vishwa123;
+show TABLES;
+SELECT * from employee_details;
 
-CREATE TABLE student (
-  id INT PRIMARY KEY,
-  name VARCHAR(50),
-  AGE INT
-);
-INSERT INTO student VALUES (1, 'Alice', 85);
-INSERT INTO student VALUES (2, 'Bob', 90);
-SELECT * FROM student;
+

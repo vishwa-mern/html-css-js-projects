@@ -2,7 +2,6 @@
 // import Course from "./Component/course";
 // import Time from "./Component/time";
 // import Navbar1 from "./Component/navbar1";
-
 // function App() {
 //  const name="Vishwajeet";
 //  const friends=["vedant ","vaibhav ","aarushi ","satyarth ","pratik "];
@@ -125,42 +124,17 @@
 //   )
 // }
 // export default App
-
-import Page from "./Component/page"
-import Profile from "./Component/context/Profile55"
-import Navbar1 from "./Component/navbar1"
-import { Route,Routes } from "react-router-dom"
-import Extra from "./Component/extra"
-import userData from "./Component/data"
-
+import Xyz from "./revision_react.jsx/revision1";
+import { useState } from "react";
 function App(){
-  console.log(userData[0]);
-  userData.map((item)=>{
-    console.log(item.email);
-  })
-  return (
+  const [count,setCount]=useState(0);
+  return(
+    <>
     <div>
-      <Navbar1/>
-      <h1> ceate react-application</h1>
-      <Page/>
-      <Profile/>
-      {/* {
-        userData.map((item)=>(
-          <Extra key={item.id} data={item} />
-        ))} */}
-
-      <Routes>
-        <Route path="/home" element={<h1>THIS IS HOME PAGE</h1>}/>
-
-        { <Route path="/Extra" element={<div>
-           {
-        userData.map((item)=>(
-          <Extra key={item.id} data={item} />
-        ))}
-
-        </div>}/> }
-      </Routes>
+      <h1>hello world</h1>   
+      <Xyz  count={count} setCount={setCount}/> 
     </div>
+    </>
   )
 }
-export default App
+export default App;
