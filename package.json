@@ -18,8 +18,10 @@
   },
   "homepage": "https://github.com/vishwa-mern/html-css-js-projects#readme",
   "dependencies": {
+    "cors": "^2.8.6",
     "ejs": "^4.0.1",
     "express": "^5.2.1",
-    "mongoose": "^9.1.5"
+    "mongoose": "^9.1.5",
+    "mysql2": "^3.20.0"
   }
 }

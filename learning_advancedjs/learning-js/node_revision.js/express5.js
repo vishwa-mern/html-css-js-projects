@@ -53,12 +53,35 @@ app.get('/products', (req, res) => {
 });
 // PUT
 app.put('/update/:id',(req,res)=>{
+    const id = parseInt(req.params.id);
+
+    const { name, age, salary, department } = req.body;
+
+    const productIndex = product.findIndex(p => p.id === id);
+
+    console.log(productIndex);
+
+    if (productIndex === -1) {
+        return res.status(404).json({ message: "Product not found" });
+    }
+
+    // update all fields properly
+    if (name !== undefined) product[productIndex].name = name;
+    if (age !== undefined) product[productIndex].age = age;
+    if (salary !== undefined) product[productIndex].salary = salary;
+    if (department !== undefined) product[productIndex].department = department;
+
+    res.json({ 
+        message: "Product updated successfully", 
+        product: product[productIndex] 
+    });
+});
+app.patch('/updates/:id',(req,res)=>{
     const id = parseInt(req.params.id);// Extract the ID from the URL parameters
     console.log(req.params.id);
     const { name, age, salary, department } = req.body; // Extract the updated data from the request body
     const productIndex = product.findIndex(p => p.id === id); // Find the index of the product with the given ID
-
-    if (productIndex === -1) {
+   if (productIndex === -1) {
         return res.status(404).json({ message: "Product not found" });
     }
     // Update the product details
@@ -66,10 +89,9 @@ app.put('/update/:id',(req,res)=>{
     if (age !== undefined) product[productIndex].age = age;
     if (salary !== undefined) product[productIndex].salary = salary;
     if (department !== undefined) product[productIndex].department = department;
-
-    res.json({ message: "Product updated successfully", product: product[productIndex] });
+    res.json({ message: "Product updated successfully",
+         product: product[productIndex]});
 });
-
-app.listen(5000, () => {
-  console.log("Server running on http://localhost:5000");
+app.listen(6000, () => {
+  console.log("Server running on http://localhost:6000");
 });
