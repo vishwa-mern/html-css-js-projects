@@ -124,16 +124,28 @@
 //   )
 // }
 // export default App
-import Xyz from "./revision_react.jsx/revision1";
-import { useState } from "react";
+// import Xyz from "./revision_react.jsx/revision1";
+// import { useState } from "react";
+// function App(){
+//   const [count,setCount]=useState(0);
+//   return(
+//     <>
+//     <div>
+//       <h1>hello world</h1>   
+//       <Xyz  count={count} setCount={setCount}/> 
+//     </div>
+//     </>
+//   )
+// }
+// export default App;
+
+import Client from "./frontend/client";
+
 function App(){
-  const [count,setCount]=useState(0);
   return(
     <>
-    <div>
-      <h1>hello world</h1>   
-      <Xyz  count={count} setCount={setCount}/> 
-    </div>
+
+    <Client />
     </>
   )
 }
