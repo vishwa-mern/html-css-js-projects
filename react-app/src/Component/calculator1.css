@@ -1,0 +1,156 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    text-align: center;
+    
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #080808be;
+}
+.cal{
+    color: #a3a3a5;
+    margin-bottom: 40px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+
+}
+
+.div2{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width:400px;
+    height: 100px;
+    background-color: #051550;
+    border-radius: 25px ;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+   
+  
+}
+input{
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+    text-align: right;
+    padding: 10px;
+    border: none;
+    background-color: #0c0154;
+    color:#e4e4e7;
+    
+    border-radius: 25px ;
+    
+}
+.cbig{
+    background-color: #0c01544c;
+    width: 430px;
+    height: 500px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container{
+    width: 400px;
+    height: 330px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 10px 20px 10px rgba(40, 9, 142, 0.736) , -10px 0 10px rgba(40, 9, 142, 0.736);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    background-color: #080556;
+    gap: 10px;
+    grid-template-areas: 
+    "btn1 btn2 btn3 btn4"
+    "btn5 btn6 btn7 btn8"
+    "btn9 btn10 btn11 btn12"
+    "btn13 btn14 btn15 btn16"
+    "btn17 btn17 btn18 btn16";
+    margin-left: 10px;
+
+}
+.btn{
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+    border: none;
+    background-color: #080556;
+    cursor: pointer;
+    border: 1px solid #f0f0f0;
+    border-radius: 30px;
+    color:#faf8f8;
+}
+.btn1{
+    grid-area: btn1;
+}
+.btn2{
+    grid-area: btn2;
+}
+.btn3{
+    grid-area: btn3;
+}
+.btn4{
+    grid-area: btn4;
+}
+.btn5{
+    grid-area: btn5;
+}
+.btn6{
+    grid-area: btn6;
+}
+.btn7{
+    grid-area: btn7;
+}
+.btn8{
+    grid-area: btn8;
+}
+
+.btn9{
+    grid-area: btn9;
+}
+
+.btn10{
+    grid-area: btn10;
+}
+.btn11{
+    grid-area: btn11;
+}
+.btn12{
+    grid-area: btn12;
+}
+.btn13{
+    grid-area: btn13;
+}
+.btn14{
+    grid-area: btn14;
+}
+.btn15{
+    grid-area: btn15;
+}
+.btn16{
+    grid-area: btn16;
+}
+.btn17{
+    grid-area: btn17;
+}
+.btn18{
+    grid-area: btn18;
+}
+
+.btn:hover{
+    background-color: #0c0154;
+    color:#1500ff;
+
+}
+.btn:active{
+    background-color: #015454;
+    color:#1500ff;
+}

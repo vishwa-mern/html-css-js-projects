@@ -139,14 +139,30 @@
 // }
 // export default App;
 
+import Calculator from "./Component/calculator";
+import Calculator1 from "./Component/calculator1";
 import Client from "./frontend/client";
+import From_page from "./frontend/frompage";
+import Login from "./frontend/login";
+import { useState } from "react";
+
 
 function App(){
-  return(
-    <>
 
-    <Client />
-    </>
+  const [isloggedin, setIsloggedin] = useState(false);
+  return(
+
+    <> 
+
+
+  {/*<Client /> */}
+   {/* {isloggedin?<From_page isloggedin={isloggedin} setIsloggedin={setIsloggedin}/>:<Login  isloggedin={isloggedin} setIsloggedin={setIsloggedin} />}
+   */}
+  {/* <From_page /> */}
+  {/* <Calculator /> */}
+  <Calculator1 />
+   </>
   )
+ 
 }
 export default App;
