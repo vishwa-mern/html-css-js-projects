@@ -65,7 +65,6 @@ console.log(input)
         <button className='btn btn15' onClick={() => handleClick('3')}>3</button>
         <button className='btn btn16' onClick={() => calculate()}>=</button>
         
-       
         <button className='btn btn17' onClick={() => handleClick('0')}>0</button>
         <button className='btn btn18' onClick={() => handleClick('.')}>.</button>
         

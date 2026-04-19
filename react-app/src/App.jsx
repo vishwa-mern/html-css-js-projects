@@ -145,6 +145,7 @@ import Client from "./frontend/client";
 import From_page from "./frontend/frompage";
 import Login from "./frontend/login";
 import { useState } from "react";
+import Animation from "./Component/Animation";
 
 
 function App(){
@@ -160,7 +161,9 @@ function App(){
    */}
   {/* <From_page /> */}
   {/* <Calculator /> */}
-  <Calculator1 />
+  {/* <Calculator1 />  */}
+  <Animation />
+  
    </>
   )
  
