@@ -7,6 +7,7 @@ const promise_demo = new Promise((resolve,reject)=>{
     else{
         reject("a is not greater than b");
     }
+    
 });
 promise_demo.then((message)=>{
     console.log("Promise resolved:", message);
